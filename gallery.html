@@ -1,0 +1,876 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gallery</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		   <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+		<![endif]-->
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+	</head>
+	<body>
+		<!---start-wrap---->
+			<!---start-header---->
+			<div class="header" id="top">
+				<div class="wrap">
+				<!---start-logo---->
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				</div>
+				<!---End-logo---->	
+				<!---start-top-nav---->
+				<div class="top-nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li class="active"><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<!---End-top-nav---->
+			</div>
+			<!---End-header---->
+		</div>
+	</div>
+		<!---start-content----->
+		<div class="content">
+			<!---start-about---->
+			<div class="gallery1">
+				<div class="wrap">
+					<div class="top-head">
+						<h3>Gallery</h3>
+						<ul>
+							<li><a href="index.html">Home / </a></li>
+							<li><a href="#"><span>Gallery</span></a></li>
+						</ul>
+					</div><br />
+					<div class="clear"> </div>
+					<div class="container">
+
+					<ul id="filters" class="clearfix">
+						<li><span class="filter active" data-filter="deer fox birds fish bear coyote">All</span></li>
+						<li><span class="filter" data-filter="deer">deer</span></li>
+						<li><span class="filter" data-filter="fox">fox</span></li>
+						<li><span class="filter" data-filter="birds">birds</span></li>
+						<li><span class="filter" data-filter="fish">fish</span></li>
+						<li><span class="filter" data-filter="bear">bear</span></li>
+						<li><span class="filter" data-filter="coyote">coyote</span></li>
+					</ul>
+
+		<div id="portfoliolist">
+
+			<div class="portfolio " data-cat="">
+				<div class="portfolio-wrapper">						
+					<a href="images/Cat1.jpg" class="flipLightBox">
+						<img src="images/thumbs/Cat1.jpg" alt="Cougar" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Cougar</a>
+							<span class="text-category">Cougar</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+			<div class="portfolio coyote" data-cat="coyote">
+				<div class="portfolio-wrapper">						
+					<a href="images/coyote1.jpg" class="flipLightBox">
+						<img src="images/thumbs/coyote1.jpg" alt="coyote" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Coyote</a>
+							<span class="text-category">Coyote</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			
+			<div class="portfolio coyote" data-cat="coyote">
+				<div class="portfolio-wrapper">						
+					<a href="images/coyote4.jpg" class="flipLightBox">
+						<img src="images/thumbs/coyote4.jpg" alt="coyote" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Coyote</a>
+							<span class="text-category">Coyote</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+					
+							
+			<div class="portfolio" data-cat="All">
+				<div class="portfolio-wrapper">						
+					<a href="images/turkey1.jpg" class="flipLightBox">
+						<img src="images/thumbs/turkey1.jpg" alt="turkey1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Turkey</a>
+							<span class="text-category">Turkey</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			
+			<div class="portfolio" data-cat="All">
+				<div class="portfolio-wrapper">						
+					<a href="images/shop1.jpg" class="flipLightBox">
+						<img src="images/thumbs/shop1.jpg" alt="shop1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Shop</a>
+							<span class="text-category">Shop</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio" data-cat="All">
+				<div class="portfolio-wrapper">						
+					<a href="images/shop2.jpg" class="flipLightBox">
+						<img src="images/thumbs/shop2.jpg" alt="shop2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Shop</a>
+							<span class="text-category">Shop</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio" data-cat="All">
+				<div class="portfolio-wrapper">						
+					<a href="images/slider4.jpg" class="flipLightBox">
+						<img src="images/thumbs/slider4.jpg" alt="shop4" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Shop</a>
+							<span class="text-category">Shop</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer1.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer1.jpg"  alt="Deer1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>					
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer2.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer2.jpg"  alt="Deer2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer3.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer3.jpg"  alt="Deer3" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer5.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer5.jpg"  alt="Deer5" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio coyote" data-cat="coyote">
+				<div class="portfolio-wrapper">						
+					<a href="images/coyote2.jpg" class="flipLightBox">
+						<img src="images/thumbs/coyote2.jpg" alt="coyote" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Coyote</a>
+							<span class="text-category">Coyote</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer6.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer6.jpg"  alt="Deer6" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer7.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer7.jpg"  alt="Deer7" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer9.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer9.jpg"  alt="Deer9" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>					
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer10.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer10.jpg"  alt="Deer10" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer12.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer12.jpg"  alt="Deer12" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio bear" data-cat="bear">
+				<div class="portfolio-wrapper">						
+					<a href="images/bear2.jpg" class="flipLightBox">
+						<img src="images/thumbs/bear2.jpg"  alt="Bear2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bear</a>
+							<span class="text-category">bear</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+
+			<div class="portfolio bear" data-cat="bear">
+				<div class="portfolio-wrapper">						
+					<a href="images/bear3.jpg" class="flipLightBox">
+						<img src="images/thumbs/bear3.jpg"  alt="Bear3" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bear</a>
+							<span class="text-category">bear</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+
+			<div class="portfolio bear" data-cat="bear">
+				<div class="portfolio-wrapper">						
+					<a href="images/bear4.jpg" class="flipLightBox">
+						<img src="images/thumbs/bear4.jpg"  alt="Bear4" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bear</a>
+							<span class="text-category">bear</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+
+			<div class="portfolio bear" data-cat="bear">
+				<div class="portfolio-wrapper">						
+					<a href="images/bear5.jpg" class="flipLightBox">
+						<img src="images/thumbs/bear5.jpg" alt="Bear5" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bear</a>
+							<span class="text-category">bear</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio birds" data-cat="birds">
+				<div class="portfolio-wrapper">						
+					<a href="images/bird1.jpg" class="flipLightBox">
+						<img src="images/thumbs/bird1.jpg" alt="Bird1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Birds</a>
+							<span class="text-category">Birds</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio birds" data-cat="birds">
+				<div class="portfolio-wrapper">						
+					<a href="images/bird4.jpg" class="flipLightBox">
+						<img src="images/thumbs/bird4.jpg" alt="Bird4" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Birds</a>
+							<span class="text-category">Birds</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+
+			<div class="portfolio birds" data-cat="birds">
+				<div class="portfolio-wrapper">						
+					<a href="images/bird6.jpg" class="flipLightBox">
+						<img src="images/thumbs/bird6.jpg" alt="Bird6" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Birds</a>
+							<span class="text-category">Birds</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+
+			<div class="portfolio birds" data-cat="birds">
+				<div class="portfolio-wrapper">						
+					<a href="images/bird7.jpg" class="flipLightBox">
+						<img src="images/thumbs/bird7.jpg" alt="Bird7" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Birds</a>
+							<span class="text-category">Birds</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>					
+			
+			<div class="portfolio birds" data-cat="birds">
+				<div class="portfolio-wrapper">						
+					<a href="images/bird8.jpg" class="flipLightBox">
+						<img src="images/thumbs/bird8.jpg" alt="Bird8" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Birds</a>
+							<span class="text-category">Birds</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+								
+			<div class="portfolio birds" data-cat="birds">
+				<div class="portfolio-wrapper">						
+					<a href="images/bird9.jpg" class="flipLightBox">
+						<img src="images/thumbs/bird9.jpg" alt="Bird9" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Birds</a>
+							<span class="text-category">Birds</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>										
+
+			<div class="portfolio fox" data-cat="fox">
+				<div class="portfolio-wrapper">						
+					<a href="images/fox3.jpg" class="flipLightBox">
+						<img src="images/thumbs/fox3.jpg" alt="fox3" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fox</a>
+							<span class="text-category">Fox</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+
+			<div class="portfolio fish" data-cat="fish">
+				<div class="portfolio-wrapper">						
+					<a href="images/fish1.jpg" class="flipLightBox">
+						<img src="images/thumbs/fish1.jpg" alt="fish1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fish</a>
+							<span class="text-category">Fish</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio fish" data-cat="fish">
+				<div class="portfolio-wrapper">						
+					<a href="images/fish2.jpg" class="flipLightBox">
+						<img src="images/thumbs/fish2.jpg" alt="fish2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fish</a>
+							<span class="text-category">Fish</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+
+			<div class="portfolio fish" data-cat="fish">
+				<div class="portfolio-wrapper">						
+					<a href="images/fish3.jpg" class="flipLightBox">
+						<img src="images/thumbs/fish3.jpg" alt="fish3" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fish</a>
+							<span class="text-category">Fish</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio fish" data-cat="fish">
+				<div class="portfolio-wrapper">						
+					<a href="images/fish4.jpg" class="flipLightBox">
+						<img src="images/thumbs/fish4.jpg" alt="fish4" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fish</a>
+							<span class="text-category">Fish</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+
+			<div class="portfolio fish" data-cat="fish">
+				<div class="portfolio-wrapper">						
+					<a href="images/fish5.jpg" class="flipLightBox">
+						<img src="images/thumbs/fish5.jpg" alt="fish5" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fish</a>
+							<span class="text-category">Fish</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio " data-cat="">
+				<div class="portfolio-wrapper">						
+					<a href="images/turkey4.jpg" class="flipLightBox">
+						<img src="images/thumbs/turkey4.jpg" alt="turkey4" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Turkey</a>
+							<span class="text-category">Turkey</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio " data-cat="">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer2.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer2.jpg"  alt="Deer2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+
+			<div class="portfolio " data-cat="">
+				<div class="portfolio-wrapper">						
+					<a href="images/Cat2.jpg" class="flipLightBox">
+						<img src="images/thumbs/Cat2.jpg" alt="Cougar" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Cougar</a>
+							<span class="text-category">Cougar</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>					
+
+			<div class="portfolio coyote" data-cat="coyote">
+				<div class="portfolio-wrapper">						
+					<a href="images/coyote3.jpg" class="flipLightBox">
+						<img src="images/thumbs/coyote3.jpg" alt="coyote" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Coyote</a>
+							<span class="text-category">Coyote</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio" data-cat="All">
+				<div class="portfolio-wrapper">						
+					<a href="images/squirrel1.jpg" class="flipLightBox">
+						<img src="images/thumbs/squirrel1.jpg" alt="squirrel1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Squirrel</a>
+							<span class="text-category">Squirrel</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio" data-cat="All">
+				<div class="portfolio-wrapper">						
+					<a href="images/turkey2.jpg" class="flipLightBox">
+						<img src="images/thumbs/turkey2.jpg" alt="turkey2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Turkey</a>
+							<span class="text-category">Turkey</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer4.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer4.jpg"  alt="Deer4" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer8.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer8.jpg"  alt="Deer8" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer11.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer11.jpg"  alt="Deer11" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer13.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer13.jpg"  alt="Deer13" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio deer" data-cat="deer">
+				<div class="portfolio-wrapper">			
+					<a href="images/deer14.jpg" class="flipLightBox">
+						<img src="images/thumbs/deer14.jpg"  alt="Deer14" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Wall of deer</a>
+							<span class="text-category">deer</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio bear" data-cat="bear">
+				<div class="portfolio-wrapper">						
+					<a href="images/bear1.jpg" class="flipLightBox">
+						<img src="images/thumbs/bear1.jpg"  alt="Bear1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bear</a>
+							<span class="text-category">bear</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio birds" data-cat="birds">
+				<div class="portfolio-wrapper">						
+					<a href="images/bird3.jpg" class="flipLightBox">
+						<img src="images/thumbs/bird3.jpg" alt="Bird3" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Birds</a>
+							<span class="text-category">Birds</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio fox" data-cat="fox">
+				<div class="portfolio-wrapper">						
+					<a href="images/fox1.jpg" class="flipLightBox">
+						<img src="images/thumbs/fox1.jpg" alt="fox1" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fox</a>
+							<span class="text-category">Fox</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="portfolio fox" data-cat="fox">
+				<div class="portfolio-wrapper">						
+					<a href="images/fox2.jpg" class="flipLightBox">
+						<img src="images/thumbs/fox2.jpg" alt="fox2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Fox</a>
+							<span class="text-category">Fox</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+		</div>
+		
+	</div><!-- container -->
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+						<script type="text/javascript">$('body').flipLightBox()</script>
+						<div class="clear"> </div>
+				</div>
+			</div>
+			<!---End-about---->
+		</div>
+			<div class="footer">
+				<div class="wrap">
+					<div class="footer-left">
+						<a href="index.html"><img src="images/logo1.png" alt="" /></a>
+					</div>
+					<div class="footer-right">
+						<a href="#top" class="scroll"> </a>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+		</div>
+		<!---End-content----->
+		<!---End-wrap---->
+	</body>
+</html>
+
